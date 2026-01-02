@@ -2,6 +2,11 @@ import { db } from "@/lib/db"
 import Image from "next/image"
 import Link from "next/link"
 import { Plus, Edit } from "lucide-react"
+import { Book, BookFormat } from "@prisma/client"
+
+type BookWithFormats = Book & {
+  formats: BookFormat[]
+}
 
 export default async function AdminBooksPage() {
   const books = await db.book.findMany({
@@ -29,7 +34,7 @@ export default async function AdminBooksPage() {
       <div className="bg-card rounded-xl shadow-lg">
         <div className="p-6">
           <div className="space-y-4">
-            {books.map((book) => (
+            {books.map((book: BookWithFormats) => (
               <div
                 key={book.id}
                 className="flex items-center gap-6 p-4 bg-background rounded-lg hover:shadow-md transition-shadow"
