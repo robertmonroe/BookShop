@@ -6,6 +6,8 @@ import Image from "next/image"
 import { Download, Headphones, FileText, BookOpen } from "lucide-react"
 import Link from "next/link"
 
+export const dynamic = 'force-dynamic'
+
 export default async function LibraryPage() {
   const session = await getServerSession(authOptions)
 

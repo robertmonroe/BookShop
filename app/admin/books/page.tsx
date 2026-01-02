@@ -3,6 +3,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Plus, Edit } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export default async function AdminBooksPage() {
   const books = await db.book.findMany({
     include: {

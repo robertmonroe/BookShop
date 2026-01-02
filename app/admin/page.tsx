@@ -1,6 +1,8 @@
 import { db } from "@/lib/db"
 import { BookOpen, ShoppingCart, DollarSign, Users } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export default async function AdminDashboard() {
   const [totalBooks, totalOrders, totalRevenue, totalCustomers] =
     await Promise.all([

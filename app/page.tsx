@@ -3,6 +3,8 @@ import { BookOpen, Headphones, FileText, BookMarked } from "lucide-react"
 import BookCard from "@/components/shop/BookCard"
 import { db } from "@/lib/db"
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   const featuredBooks = await db.book.findMany({
     where: { featured: true },

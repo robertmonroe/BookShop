@@ -3,6 +3,8 @@ import BookCard from "@/components/shop/BookCard"
 import { BookFormatType } from "@prisma/client"
 import FilterBar from "@/components/shop/FilterBar"
 
+export const dynamic = 'force-dynamic'
+
 interface BooksPageProps {
   searchParams: Promise<{ format?: string; search?: string }>
 }

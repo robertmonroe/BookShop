@@ -5,6 +5,8 @@ import { BookFormatType } from "@prisma/client"
 import FormatSelector from "@/components/shop/FormatSelector"
 import AddToCartButton from "@/components/shop/AddToCartButton"
 
+export const dynamic = 'force-dynamic'
+
 interface BookPageProps {
   params: Promise<{ slug: string }>
 }
